@@ -12,7 +12,8 @@ function Meal(props) {
       return;
     }
 
-    ctx.addItem({ ...props.meal, amount: amount.current.value });
+    ctx.addItem({ ...props.meal, amount: +amount.current.value });
+    amount.current.value = "";
   }
 
   return (
